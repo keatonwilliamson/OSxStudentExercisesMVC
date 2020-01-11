@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{A182464B-C2D4-4590-B675-2E8A35948E8D}|Default">
+  <MonoDevelop.Ide.ItemProperties.StudentExercisesMVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Student.cs">
+    <Files>
+      <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="Models/Exercise.cs" Line="1" Column="1" />
+      <File FileName="Models/Cohort.cs" Line="1" Column="1" />
+      <File FileName="Models/Instructor.cs" Line="1" Column="1" />
+      <File FileName="Models/Student.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StudentExercisesMVC" expanded="True">
+            <Node name="StudentExercisesMVC" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Student.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
