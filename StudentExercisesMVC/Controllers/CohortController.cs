@@ -9,22 +9,22 @@ using StudentExercises.Models;
 
 namespace StudentExercisesMVC.Controllers
 {
-    public class ExerciseController : Controller
+    public class CohortController : Controller
     {
         private readonly MvcDatabaseContext _context;
 
-        public ExerciseController(MvcDatabaseContext context)
+        public CohortController(MvcDatabaseContext context)
         {
             _context = context;
         }
 
-        // GET: Exercise
+        // GET: Cohort
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Exercise.ToListAsync());
+            return View(await _context.Cohort.ToListAsync());
         }
 
-        // GET: Exercise/Details/5
+        // GET: Cohort/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +32,39 @@ namespace StudentExercisesMVC.Controllers
                 return NotFound();
             }
 
-            var exercise = await _context.Exercise
+            var cohort = await _context.Cohort
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (exercise == null)
+            if (cohort == null)
             {
                 return NotFound();
             }
 
-            return View(exercise);
+            return View(cohort);
         }
 
-        // GET: Exercise/Create
+        // GET: Cohort/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Exercise/Create
+        // POST: Cohort/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ExerciseName,ExerciseLanguage")] Exercise exercise)
+        public async Task<IActionResult> Create([Bind("Id,CohortName")] Cohort cohort)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(exercise);
+                _context.Add(cohort);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(exercise);
+            return View(cohort);
         }
 
-        // GET: Exercise/Edit/5
+        // GET: Cohort/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +72,22 @@ namespace StudentExercisesMVC.Controllers
                 return NotFound();
             }
 
-            var exercise = await _context.Exercise.FindAsync(id);
-            if (exercise == null)
+            var cohort = await _context.Cohort.FindAsync(id);
+            if (cohort == null)
             {
                 return NotFound();
             }
-            return View(exercise);
+            return View(cohort);
         }
 
-        // POST: Exercise/Edit/5
+        // POST: Cohort/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ExerciseName,ExerciseLanguage")] Exercise exercise)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CohortName")] Cohort cohort)
         {
-            if (id != exercise.Id)
+            if (id != cohort.Id)
             {
                 return NotFound();
             }
@@ -96,12 +96,12 @@ namespace StudentExercisesMVC.Controllers
             {
                 try
                 {
-                    _context.Update(exercise);
+                    _context.Update(cohort);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ExerciseExists(exercise.Id))
+                    if (!CohortExists(cohort.Id))
                     {
                         return NotFound();
                     }
@@ -112,10 +112,10 @@ namespace StudentExercisesMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(exercise);
+            return View(cohort);
         }
 
-        // GET: Exercise/Delete/5
+        // GET: Cohort/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,30 +123,30 @@ namespace StudentExercisesMVC.Controllers
                 return NotFound();
             }
 
-            var exercise = await _context.Exercise
+            var cohort = await _context.Cohort
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (exercise == null)
+            if (cohort == null)
             {
                 return NotFound();
             }
 
-            return View(exercise);
+            return View(cohort);
         }
 
-        // POST: Exercise/Delete/5
+        // POST: Cohort/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var exercise = await _context.Exercise.FindAsync(id);
-            _context.Exercise.Remove(exercise);
+            var cohort = await _context.Cohort.FindAsync(id);
+            _context.Cohort.Remove(cohort);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ExerciseExists(int id)
+        private bool CohortExists(int id)
         {
-            return _context.Exercise.Any(e => e.Id == id);
+            return _context.Cohort.Any(e => e.Id == id);
         }
     }
 }

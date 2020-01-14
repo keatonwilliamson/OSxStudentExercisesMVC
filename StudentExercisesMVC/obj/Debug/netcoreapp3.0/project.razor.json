@@ -14349,6 +14349,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Cohort/Details.cshtml",
+      "TargetPath": "Views/Cohort/Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Exercise/Index.cshtml",
       "TargetPath": "Views/Exercise/Index.cshtml",
       "FileKind": "mvc"
@@ -14374,13 +14379,43 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Student/Edit.cshtml",
+      "TargetPath": "Views/Student/Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Home/Index.cshtml",
       "TargetPath": "Views/Home/Index.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Cohort/Create.cshtml",
+      "TargetPath": "Views/Cohort/Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Shared/Error.cshtml",
       "TargetPath": "Views/Shared/Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Student/Delete.cshtml",
+      "TargetPath": "Views/Student/Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Student/Details.cshtml",
+      "TargetPath": "Views/Student/Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Student/Create.cshtml",
+      "TargetPath": "Views/Student/Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Student/Index.cshtml",
+      "TargetPath": "Views/Student/Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14394,8 +14429,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Cohort/Edit.cshtml",
+      "TargetPath": "Views/Cohort/Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Exercise/Details.cshtml",
       "TargetPath": "Views/Exercise/Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Cohort/Index.cshtml",
+      "TargetPath": "Views/Cohort/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/Views/Cohort/Delete.cshtml",
+      "TargetPath": "Views/Cohort/Delete.cshtml",
       "FileKind": "mvc"
     },
     {

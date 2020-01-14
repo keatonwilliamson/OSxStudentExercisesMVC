@@ -144,3 +144,13 @@
 /Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Exercise/Details.cshtml.g.cs
 /Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Exercise/Edit.cshtml.g.cs
 /Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Exercise/Index.cshtml.g.cs
+/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Cohort/Create.cshtml.g.cs
+/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Cohort/Delete.cshtml.g.cs
+/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Cohort/Details.cshtml.g.cs
+/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Cohort/Edit.cshtml.g.cs
+/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Cohort/Index.cshtml.g.cs
+/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Student/Create.cshtml.g.cs
+/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Student/Delete.cshtml.g.cs
+/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Student/Details.cshtml.g.cs
+/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Student/Edit.cshtml.g.cs
+/Users/keatonwilliamson/workspace/C#35-Demos/mvc/StudentExercisesMVC/StudentExercisesMVC/obj/Debug/netcoreapp3.0/Razor/Views/Student/Index.cshtml.g.cs

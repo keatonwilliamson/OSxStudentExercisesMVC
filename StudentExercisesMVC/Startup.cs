@@ -10,8 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 
-using Microsoft.EntityFrameworkCore;  
-using StudentExercises.Models; 
+using Microsoft.EntityFrameworkCore;
+using StudentExercises.Models;
 
 // using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 // using Microsoft.Data.Entity;
@@ -33,11 +33,13 @@ namespace StudentExercisesMVC
             services.AddControllersWithViews();
             // services.AddDbContext<MvcExerciseContext>(options =>options.UseSqlServer("Data Source=MvcExercise.db"));
 
-            services.AddDbContext<MvcExerciseContext>(options => {
-        options.UseSqlServer("Server=127.0.0.1,1401;Database=StudentExercises;User Id=SA;Password=Yerbamate19$;");
-    });
-    //         services.AddDbContext<MvcExerciseContext>(
-    // options => options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+            services.AddDbContext<MvcDatabaseContext>(options =>
+            {
+                options.UseSqlServer("Server=127.0.0.1,1401;Database=StudentExercises;User Id=SA;Password=Yerbamate19$;");
+            });
+
+            //         services.AddDbContext<MvcExerciseContext>(
+            // options => options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

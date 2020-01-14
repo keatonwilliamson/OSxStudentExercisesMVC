@@ -9,22 +9,23 @@ using StudentExercises.Models;
 
 namespace StudentExercisesMVC.Controllers
 {
-    public class ExerciseController : Controller
+    public class StudentController : Controller
     {
         private readonly MvcDatabaseContext _context;
 
-        public ExerciseController(MvcDatabaseContext context)
+        public StudentController(MvcDatabaseContext context)
         {
             _context = context;
         }
 
-        // GET: Exercise
+        // GET: Student
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Exercise.ToListAsync());
+            var mvcDatabaseContext = _context.Student.Include(s => s.Cohort);
+            return View(await mvcDatabaseContext.ToListAsync());
         }
 
-        // GET: Exercise/Details/5
+        // GET: Student/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +33,42 @@ namespace StudentExercisesMVC.Controllers
                 return NotFound();
             }
 
-            var exercise = await _context.Exercise
+            var student = await _context.Student
+                .Include(s => s.Cohort)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (exercise == null)
+            if (student == null)
             {
                 return NotFound();
             }
 
-            return View(exercise);
+            return View(student);
         }
 
-        // GET: Exercise/Create
+        // GET: Student/Create
         public IActionResult Create()
         {
+            ViewData["CohortId"] = new SelectList(_context.Cohort, "Id", "Id");
             return View();
         }
 
-        // POST: Exercise/Create
+        // POST: Student/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ExerciseName,ExerciseLanguage")] Exercise exercise)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,SlackHandle,CohortId")] Student student)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(exercise);
+                _context.Add(student);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(exercise);
+            ViewData["CohortId"] = new SelectList(_context.Cohort, "Id", "Id", student.CohortId);
+            return View(student);
         }
 
-        // GET: Exercise/Edit/5
+        // GET: Student/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +76,23 @@ namespace StudentExercisesMVC.Controllers
                 return NotFound();
             }
 
-            var exercise = await _context.Exercise.FindAsync(id);
-            if (exercise == null)
+            var student = await _context.Student.FindAsync(id);
+            if (student == null)
             {
                 return NotFound();
             }
-            return View(exercise);
+            ViewData["CohortId"] = new SelectList(_context.Cohort, "Id", "Id", student.CohortId);
+            return View(student);
         }
 
-        // POST: Exercise/Edit/5
+        // POST: Student/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ExerciseName,ExerciseLanguage")] Exercise exercise)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,SlackHandle,CohortId")] Student student)
         {
-            if (id != exercise.Id)
+            if (id != student.Id)
             {
                 return NotFound();
             }
@@ -96,12 +101,12 @@ namespace StudentExercisesMVC.Controllers
             {
                 try
                 {
-                    _context.Update(exercise);
+                    _context.Update(student);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ExerciseExists(exercise.Id))
+                    if (!StudentExists(student.Id))
                     {
                         return NotFound();
                     }
@@ -112,10 +117,11 @@ namespace StudentExercisesMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(exercise);
+            ViewData["CohortId"] = new SelectList(_context.Cohort, "Id", "Id", student.CohortId);
+            return View(student);
         }
 
-        // GET: Exercise/Delete/5
+        // GET: Student/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,30 +129,31 @@ namespace StudentExercisesMVC.Controllers
                 return NotFound();
             }
 
-            var exercise = await _context.Exercise
+            var student = await _context.Student
+                .Include(s => s.Cohort)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (exercise == null)
+            if (student == null)
             {
                 return NotFound();
             }
 
-            return View(exercise);
+            return View(student);
         }
 
-        // POST: Exercise/Delete/5
+        // POST: Student/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var exercise = await _context.Exercise.FindAsync(id);
-            _context.Exercise.Remove(exercise);
+            var student = await _context.Student.FindAsync(id);
+            _context.Student.Remove(student);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ExerciseExists(int id)
+        private bool StudentExists(int id)
         {
-            return _context.Exercise.Any(e => e.Id == id);
+            return _context.Student.Any(e => e.Id == id);
         }
     }
 }
